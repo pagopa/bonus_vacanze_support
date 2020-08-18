@@ -1,9 +1,10 @@
 # Introduction
 This repository contains some useful scripts to use while supporting the Help Desk during the daily customer care job, mainly focused on the "Bonus Vacanze" initiative.
 
-So far there 2 scripts:
+So far there 3 scripts:
 - **get_prifile.py** => returns the user profiles givend his/her email or fiscal code
 - **get_bonus.py** => returns the bonus activation json given the user's fiscal code.
+- **get_logs.py** => returns log entries for insp and ade calls
 
 ## Setup
 
@@ -42,6 +43,10 @@ COSMOS_API_KEY='<cosmos db key>'
 # io-p-cosmos-bonus
 COSMOS_BONUS_ENDPOINT='<cosmos db url>'
 COSMOS_BONUS_KEY='<cosmos db key>'
+
+LOG_ACCOUNT_NAME='iopstbonus'
+LOG_ACCOUN_KEY='<storage account key>'
+
 ```
 
 ## Run the scripts
@@ -60,4 +65,10 @@ COSMOS_BONUS_KEY='<cosmos db key>'
 
 ```
 >> python get_bonus.py -f <user fiscal code>
+```
+
+- Get logs by fiscal code
+
+```
+>> python get_logs.py -l inps -f <user fiscal code>
 ```

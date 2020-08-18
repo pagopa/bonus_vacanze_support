@@ -1,4 +1,5 @@
-# pip install azure.cosmos
+#!/usr/bin/env python3
+
 from azure.cosmos import exceptions, CosmosClient, PartitionKey
 import sys, getopt
 from os.path import join, dirname
